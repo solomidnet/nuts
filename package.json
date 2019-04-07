@@ -1,6 +1,6 @@
 {
   "name": "nuts-serve",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Server to make GitHub releases (private) available to download with Squirrel support",
   "main": "./lib/index.js",
   "homepage": "https://github.com/GitbookIO/nuts",
@@ -9,6 +9,7 @@
     "analytics-node": "1.2.2",
     "basic-auth": "1.0.3",
     "body-parser": "1.12.3",
+    "cors": "^2.8.5",
     "destroy": "1.0.3",
     "express": "^4.13.3",
     "express-useragent": "0.1.9",
@@ -35,7 +36,7 @@
     "supertest": "^2.0.0"
   },
   "bugs": {
-    "url": "https://github.com/GitbookIO/nuts/issues"
+    "url": "https://github.com/theblitzapp/nuts/issues"
   },
   "authors": [
     {
@@ -45,7 +46,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/GitbookIO/nuts.git"
+    "url": "https://github.com/theblitzapp/nuts.git"
   },
   "scripts": {
     "start": "node bin/web.js",

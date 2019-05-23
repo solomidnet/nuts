@@ -5,6 +5,7 @@ var uuid = require('uuid');
 var basicAuth = require('basic-auth');
 var Analytics = require('analytics-node');
 var morgan = require('morgan');
+var cors = require('cors');
 var nuts = require('../');
 
 var app = express();
@@ -92,6 +93,7 @@ if (process.env.TRUST_PROXY) {
 }
 
 app.use(morgan('combined'));
+app.use(cors());
 
 app.use(myNuts.router);
 

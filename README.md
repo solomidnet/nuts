@@ -1,5 +1,44 @@
 # Nuts
 
+## Deploying Nuts (Production)
+* Prerequisite: Access to GCP
+* Env variables used are in ~/.profile under root account
+* Commands:
+```
+gcloud compute ssh nuts
+sudo -i
+cd nuts
+git pull
+pm2 restart all
+pm2 list
+pm2 log
+```
+## Deploying Nuts Cloudflare Invalidator (Production)
+* Prerequisite: Access to GCP
+* Env variables used are in ~/.profile under root account
+* Commands:
+```
+gcloud compute ssh nuts
+sudo -i
+screen -r invalidator
+# Chanage cloudflare-invalidator.py and start it again
+ctrl + a
+ctrl + d
+```
+## Deploying Nuts Test (Development)
+* Prerequisite: Access to GCP
+* Commands:
+```
+gcloud compute ssh nuts-test
+sudo -i
+cd nuts
+git pull
+pm2 restart all
+pm2 list
+pm2 log
+```
+---
+
 Nuts is a simple (and smart) application to serve desktop-application releases.
 
 ![Schema](./docs/schema.png)
